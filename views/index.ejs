@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ayisin-Blog | <%= title %> </title>
+</head>
+<body>
+
+    <!--including the nav code from its directory-->
+
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>AYISIN CONNECT</h1></a>
+            <p>Express Your Thoughts Freely</p>
+        </div>
+    
+    <ul>
+        <li><a href="/">Blogs</a></li>
+        <li><a href="/about">About-us</a></li>
+        <li><a href="/create">Add New Post</li>
+    </ul>
+    </nav>
+    
+
+<div class="blog-content">
+    <h2>All Posts</h2>
+
+<!--ejs code to display the post to the users -->
+    <% if (blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+            <a class="single" href="/blogs/<% blog._id %>">
+            <h3 class="title"><%= blog.title %></h3>
+            <p class="snippet"><%= blog.snippet %></p>
+          </a>
+        <% }) %>
+      <% } else { %>
+        <p>There are no blogs to display...</p>
+      <% } %>
+
+</div>
+
+
+<footer>
+    Copyright &copy; Ayisin Connect 2021
+</footer>
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ayisin-Blog | <%= title %> </title>
+</head>
+<body>
+   <nav>
+       <div class="site-title">
+           <a href="/"><h1>AYISIN CONNECT</h1></a>
+           <p>Express Your Thoughts Freely</p>
+       </div>
+
+   <ul>
+       <li><a href="/">Blogs</a></li>
+       <li><a href="/about">About-us</a></li>
+       <li><a href="/create">Add New Post</li>
+   </ul>
+</nav>
+
+<div class="create-blog content">
+    <form action="/blogs" method="post">
+        <label for="title">Post title:</label>
+        <input type="text" id="title"  name="title" required>
+
+        <label for="text">Post snippet:</label>
+        <input type="text" id="snippet" name="snippet" required>
+
+        <label for="title">Post body:</label>
+        <textarea type="text" id="body" name="body" required></textarea> 
+
+        <button>Submit</button>
+
+    </form>
+</div>
+
+
+
+<footer>
+    Copyright &copy; Ayisin Connect 2021
+  </footer>
+  </body>
+  </html>
